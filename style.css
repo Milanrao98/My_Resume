@@ -1,0 +1,668 @@
+.header {
+   background-image: url("../image/macbook_mouse.jpg"); 
+   width: 100%;
+   height: 70%; /* Allow the height to adjust based on content */
+   background-size: cover;
+   backdrop-filter: brightness(120%);
+   padding-bottom: 2rem; /* Add padding for better spacing if needed */
+   display: flex;
+   flex-direction: column; /* Stack children vertically */
+   align-items: center; /* Center content horizontally */
+}
+
+.nav-list {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   column-gap: 2%; 
+   padding: 2%;
+   margin: 0;
+}
+
+.nav-list a {
+   color: white;
+   text-decoration: none;
+   align-content: center;
+   margin-top: 5%;
+   padding: 5%;
+}
+
+.name {
+   font-size: 250%;
+   margin-top: 1rem; /* Adjust spacing from nav bar */
+   padding: 0; /* Remove unnecessary padding */
+   align-self: center; /* Ensure alignment within the flex container */
+   color: white;
+   margin-top: 10%;
+   margin-bottom: 20%;
+   font-weight: bolder;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+.nav-list a:hover {
+   transform: scale(1.2); /* Slightly enlarge on hover */
+   color: #00acee; /* Optional: Change color on hover */
+}
+
+
+/* Name*/
+
+.name {
+   font-size: xx-large;
+   margin-top: 1rem;
+   padding: 0;
+   align-self: center;
+   margin-bottom: 2rem;
+   
+}
+
+.social-icons {
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+   margin-top: -0.5rem; /* Negative margin pulls the icons closer to the name */
+}
+.social-icons .icon {
+   color: white; /* Icon color */
+   font-size: 1.5rem; /* Icon size */
+   text-decoration: none; /* Remove underline */
+   transition: transform 0.2s, color 0.2s; /* Hover effect */
+}
+
+.social-icons .icon:hover {
+   transform: scale(1.2); /* Slightly enlarge on hover */
+   color: #00acee; /* Optional: Change color on hover */
+}
+
+
+/* Profile pic*/
+
+.profile-picture {
+   position: absolute;
+   top: 250px; /* Adjust this to overlap the header */
+   left: 50%;
+   transform: translateX(-50%);
+   width: 150px;
+   height: 150px;
+   border: 5px solid white;
+   border-radius: 50%;
+   overflow: hidden;
+   background-image: url("https://lh3.googleusercontent.com/a/ACg8ocLmZ9_vxj-2DkzbSmChtiX3XSZ4s2s6CBhnNvoFsooIBOGlmkHTWA=s432-c-no");
+   margin-top: 10%;
+   background-size: contain;
+}
+
+.profile-picture img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* About Section*/
+
+.about-section {
+   text-align: center;
+   margin: 2rem auto;
+   padding: 1rem;
+   width: 80%;
+   max-width: 800px;
+   border-radius: 8px; /* Slightly rounded corners */
+   margin-top: 10%;
+}
+
+.about-section h2 {
+   font-size: 2rem;
+   margin-bottom: 1rem;
+   color: #333; /* Darker text color for heading */
+}
+
+.about-section p {
+   font-size: 1rem;
+   line-height: 1.6;
+   color: #555; /* Slightly lighter text color for paragraph */
+}
+
+
+/* SKILLS */
+
+.skills-section {
+   text-align: center;
+   margin: 2rem auto;
+   padding: 1rem;
+   width: 90%;
+   max-width: 1000px;
+   background: #f9f9f9;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills-section h2 {
+   font-size: 2rem;
+   margin-bottom: 1.5rem;
+   color: #333;
+}
+
+.skills-row {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 1.5rem;
+   gap: 1rem;
+}
+
+.skill {
+   flex: 1; /* Equal width for all skill bars */
+}
+
+.skill-bar {
+   position: relative;
+   width: 100%;
+   height: 40px; /* Larger skill bars */
+   background: #ddd;
+   border-radius: 5px;
+   overflow: hidden;
+}
+
+.skill-fill {
+   height: 100%;
+   border-radius: 5px;
+   transition: width 0.5s ease-in-out;
+}
+
+.skill-name {
+   position: absolute;
+   top: 50%;
+   left: 10px;
+   transform: translateY(-50%);
+   color: white;
+   font-size: 1rem;
+   font-weight: bold;
+   z-index: 2;
+}
+
+.skill-fill.html {
+   width: 90%; /* Adjust level */
+   background: #f16529; /* HTML color */
+}
+
+.skill-fill.css {
+   width: 85%; /* Adjust level */
+   background: #2965f1; /* CSS color */
+}
+
+.skill-fill.javascript {
+   width: 75%; /* Adjust level */
+   background: #f7df1e; /* JavaScript color */
+}
+
+.skill-fill.react {
+   width: 70%; /* Adjust level */
+   background: #61dafb; /* React color */
+}
+
+.skill-fill.node {
+   width: 65%; /* Adjust level */
+   background: #3c873a; /* Node.js color */
+}
+
+.divider {
+   width: 100%;
+   height: 10px; /* Height of the divider */
+   background: linear-gradient(90deg, #4e73df, #1cc88a); /* Gradient for a modern look */
+   margin: 2rem 0; /* Adds space above and below the divider */
+}
+
+/* Experience*/
+
+.work-experience {
+   position: relative;
+   margin: 3rem auto;
+   width: 80%;
+   max-width: 1200px;
+   text-align: center;
+}  
+   
+
+.timeline {
+   position: relative;
+}
+
+.timeline-line {
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 4px;
+   height: 100%;
+   background: #ccc;
+   z-index: 1;
+}
+
+.plane-icon {
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 20px;
+   height: 20px;
+   background: url('path-to-plane-icon.png') no-repeat center/contain;
+   animation: moveDown 5s linear infinite; /* Moves the plane icon down */
+   z-index: 2;
+}
+
+.timeline-item {
+   position: relative;
+   width: 45%;
+   background: #f9f9f9;
+   padding: 1rem;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   margin: 2rem 0;
+}
+
+.timeline-item h3 {
+   font-size: 1.5rem;
+   color: #333;
+   margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+   font-size: 1rem;
+   color: #666;
+   margin-bottom: 0.5rem;
+}
+
+.timeline-item span {
+   font-size: 0.9rem;
+   color: #999;
+}
+
+.timeline-item.left {
+   margin-left: 0;
+   margin-right: auto;
+   text-align: left;
+}
+
+.timeline-item.right {
+   margin-left: auto;
+   margin-right: 0;
+   text-align: right;
+}
+
+@keyframes moveDown {
+   0% {
+       top: 0;
+   }
+   100% {
+       top: 100%;
+   }
+}
+
+.divider {
+   width: 100%;
+   height: 10px; /* Height of the divider */
+   background: linear-gradient(90deg, #4e73df, #1cc88a); /* Gradient for a modern look */
+   margin: 2rem 0; /* Adds space above and below the divider */
+}
+
+/* Education */
+
+.divider {
+   width: 100%;
+   height: 10px; /* Height of the divider */
+   background: linear-gradient(90deg, #4e73df, #1cc88a); /* Gradient for a modern look */
+   margin: 2rem 0; /* Adds space above and below the divider */
+}
+
+/* Education Section */
+.education {
+   position: relative;
+   margin: 3rem auto;
+   width: 80%;
+   max-width: 1200px;
+   text-align: center;
+   background-color: #f5f5f5; /* Light gray background */
+   padding: 3rem 0; /* Padding inside the section */
+   border-radius: 8px; /* Rounded corners */
+}
+
+/* Section Heading */
+.section-heading {
+   font-size: 3rem; /* Large heading size */
+   font-weight: bold;
+   color: black; /* Dark text color */
+   text-align: center;
+   margin-bottom: 2rem; /* Space below heading */
+   text-transform: uppercase; /* Optional: uppercase styling */
+   letter-spacing: 2px; /* Spaced-out letters for style */
+}
+
+/* Timeline Line */
+.timeline {
+   position: relative;
+}
+
+.timeline-line {
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 4px;
+   height: 100%;
+   background: #ccc; /* Neutral gray color */
+   z-index: 1;
+}
+
+/* Plane Icon */
+.plane-icon {
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 20px;
+   height: 20px;
+   background: url('path-to-plane-icon.png') no-repeat center/contain;
+   animation: moveDown 5s linear infinite; /* Moves the plane icon down */
+   z-index: 2;
+}
+
+/* Timeline Item */
+.timeline-item {
+   position: relative;
+   width: 45%;
+   background: #fff; /* White background for contrast */
+   padding: 1rem;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   margin: 2rem 0;
+   z-index: 2;
+}
+
+.timeline-item h3 {
+   font-size: 1.5rem;
+   color: #333; /* Darker font color */
+   margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+   font-size: 1rem;
+   color: #666; /* Lighter font color */
+   margin-bottom: 0.5rem;
+}
+
+.timeline-item span {
+   font-size: 0.9rem;
+   color: #999; /* Gray color for date range */
+}
+
+/* Alternating Alignment */
+.timeline-item.left {
+   margin-left: 0;
+   margin-right: auto;
+   text-align: left;
+}
+
+.timeline-item.right {
+   margin-left: auto;
+   margin-right: 0;
+   text-align: right;
+}
+
+/* Plane Icon Animation */
+@keyframes moveDown {
+   0% {
+       top: 0;
+   }
+   100% {
+       top: 100%;
+   }
+}
+
+
+/* Portfolio */
+
+/* Portfolio Section */
+.portfolio {
+   background-color: #f5f5f5; /* Light gray background */
+   padding: 3rem 0;
+   text-align: center;
+}
+
+.section-heading {
+   font-size: 3rem;
+   font-weight: bold;
+   color: #333;
+   text-align: center;
+   margin-bottom: 2rem;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+   gap: 1.5rem;
+   width: 80%;
+   margin: 0 auto;
+}
+
+/* Portfolio Items */
+.portfolio-item {
+   position: relative;
+   overflow: hidden;
+   border-radius: 8px; /* Rounded corners */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover; /* Ensures images fill the container */
+   border-radius: 8px;
+}
+
+.portfolio-item:hover {
+   transform: scale(1.05); /* Slight zoom on hover */
+   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Portfolio Captions */
+.portfolio-caption {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark background */
+   color: #fff; /* White text */
+   text-align: center;
+   padding: 0.5rem 0;
+   font-size: 1.2rem;
+   opacity: 0; /* Initially hidden */
+   transition: opacity 0.3s ease;
+   border-radius: 0 0 8px 8px; /* Matches container's rounded corners */
+}
+
+.portfolio-item:hover .portfolio-caption {
+   opacity: 1; /* Shows caption on hover */
+}
+
+.portfolio-caption::before {
+   content: "Write here about your project"; /* Hover text */
+   display: block;
+   font-size: 1.1rem;
+   margin-bottom: 0.5rem;
+   opacity: 0.8; /* Reduced visibility of text */
+}
+
+
+
+
+/* Contact Section */
+.contact {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   background: linear-gradient(to top right, #ADD8E6, #00008B); /* Light blue to dark blue gradient */
+   padding: 3rem;
+   border-radius: 10px;
+   margin: 3rem 0;
+}
+
+/* Left Side - Contact Form */
+.contact-form {
+   width: 45%;
+}
+
+.section-heading {
+   font-size: 3rem;
+   font-weight: bold;
+   color: white;
+   margin-bottom: 1rem;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   text-align: left;
+}
+
+.input-field {
+   margin-bottom: 1.5rem;
+}
+
+.input-field input,
+.input-field textarea {
+   width: 100%;
+   padding: 10px;
+   margin: 10px 0;
+   background: transparent;
+   color: white;
+   font-size: 1rem;
+   outline: none;
+   border: none;
+   border-bottom: 2px solid white; /* Only bottom border to create the line */
+}
+
+.input-field textarea {
+   resize: vertical;
+   height: 150px;
+}
+
+.send-button {
+   background: transparent;
+   color: white;
+   padding: 12px 25px;
+   border: 2px solid white;
+   font-size: 1rem;
+   cursor: pointer;
+   border-radius: 5px;
+   transition:  0.3s ease, color 0.3s ease;
+}
+
+.send-button:hover {
+   background: white;
+   color: #00008B;
+}
+
+/* Right Side - Contact Info */
+.contact-info {
+   width: 45%;
+   color: white;
+}
+
+.contact-info h3 {
+   font-size: 2.5rem;
+   font-weight: bold;
+   margin-bottom: 1rem;
+}
+
+.contact-details p {
+   font-size: 1.2rem;
+   margin: 1rem 0;
+}
+
+.icon-location,
+.icon-phone,
+.icon-email {
+   margin-right: 10px;
+   vertical-align: middle;
+}
+
+.icon-location:before {
+   content: "\f041"; /* Example: Font Awesome location icon */
+   font-family: 'FontAwesome';
+}
+
+.icon-phone:before {
+   content: "\f095"; /* Example: Font Awesome phone icon */
+   font-family: 'FontAwesome';
+}
+
+.icon-email:before {
+   content: "\f0e0"; /* Example: Font Awesome envelope icon */
+   font-family: 'FontAwesome';
+}
+
+/* Social Icons Styling */
+.social-icons-footer {
+   display: flex;
+   justify-content: center;
+   margin-top: 10%;
+}
+
+.social-icons-footer .icon {
+   margin: 0 15px;
+   color: white;
+   font-size: 2rem;
+   transition: color 0.3s ease;
+}
+
+.social-icons-footer .icon:hover {
+   color: #ADD8E6; /* Change to a light color on hover */
+}
+
+.social-icons-footeri {
+   font-size: 2rem; /* Adjust size of the icons */
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 550px) {
+   /* Navbar adjustments for mobile */
+   .navbar-nav {
+       text-align: center;
+       width: 100%;
+   }
+
+   .nav-item {
+       margin: 10px 0;
+   }
+
+   /* Adjust navbar brand */
+   .navbar-brand {
+       font-size: 1.5rem;
+   }
+
+   /* Ensure navbar toggler is visible */
+   .navbar-toggler {
+       border-color: white;
+   }
+
+   .navbar-toggler-icon {
+       background-color: white;
+   }
+
+   /* Style the navigation links when collapsed */
+   .navbar-collapse {
+       justify-content: center;
+   }
+
+   .nav-link {
+       font-size: 1.2rem;
+       padding: 10px 0;
+   }
+}
